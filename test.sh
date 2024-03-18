@@ -103,7 +103,7 @@ select opt in "${options[@]}"; do
 
 			echo -e "${CYAN}Enter the User Password (default: 4 space) / Nhập mật khẩu (mặc định: 4 dấu cách)${NC}"
 			read -rsp "Password: " userPassword
-			userPassword="${userPassword:=.   }"
+			userPassword="${userPassword:=1234}"
 
 			echo -e "\n${BLUE}Creating User / Đang tạo User${NC}"
 			dscl -f "$dscl_path" localhost -create "$localUserDirPath/$username"
